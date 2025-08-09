@@ -18,6 +18,7 @@
         printf("PIB: %.2f milhões de reais\n", pib);
         printf("Pontos Turísticos: %d\n", pontos);
         
-
+        
     return 0;
 }
+
