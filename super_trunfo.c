@@ -9,7 +9,9 @@
         float area = 1521.11; // Área em km²
         float pib = 700000.00; // PIB em milhões de reais
         int pontos = 50;
-        
+        float densidade = populacao / area; // Densidade populacional
+        float pib_per_capita = pib / populacao; // PIB per capita
+           
         printf("Estado 1: %c\n", estado);
         printf("Código 1: %s\n", codigo);
         printf("Nome da Cidade: %s\n", nome);
@@ -17,6 +19,8 @@
         printf("Área: %.2f km²\n", area);
         printf("PIB: %.2f milhões de reais\n", pib);
         printf("Pontos Turísticos: %d\n", pontos);
+        printf("Densidade Populacional: %.2f habitantes/km²\n", densidade);
+        printf("PIB per Capita: %.2f reais\n", pib_per_capita);
         
         
     return 0;
