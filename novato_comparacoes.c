@@ -109,7 +109,13 @@ int main() {
         printf("As duas cartas têm o mesmo PIB per capita.\n");
 
     }
-
-
+    if(superpoder > superpoder2) {
+        printf("A carta 1 tem um super poder maior que a carta 2.\n");
+    } else if(superpoder < superpoder2) {
+        printf("A carta 2 tem um super poder maior que a carta 1.\n");
+    } else {
+        printf("As duas cartas têm o mesmo super poder.\n");
+    }
+   
     return 0;
 }
