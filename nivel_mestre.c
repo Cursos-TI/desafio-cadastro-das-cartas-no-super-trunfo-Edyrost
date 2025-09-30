@@ -1,14 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-int main() {
-    char estado = 'A';
+
+int main(void) {
+   char estado = 'A';
     char codigo[5] = "A01";
     char nome[15] = "São Paulo";
     int populacao1 = 123250000;
     float area1 = 1521.11; //Em KM²
-    float pib = 699.28; //Bilhões de Reais
+    float pib = 699.280; //Bilhões de Reais
     int numerodepontosturisticos1 = 50;
-    float densidadepopulacional = (float)populacao1/area1;
+    float densidadepopulacional = populacao1/area1;
     float pibpercapita = pib/populacao1;
     float superpoder = populacao1 + area1 + pib + pibpercapita + densidadepopulacional + numerodepontosturisticos1;
 
@@ -16,10 +19,10 @@ int main() {
     char codigo2[5] = "B02";
     char nome2[15] = "Rio de Janeiro";
     int populacao2 = 67480000;
-    float area2 = 1200.25; //Em KM²
-    float pib2 = 300.50; //Bilhões de Reais
+    float area2 = 1200.25 //Em KM²
+    float pib2 = 300.500; //Bilhões de Reais
     int numerodepontosturisticos2 = 30;
-    float densidadepopulacional2 = (float)populacao2/area2;
+    float densidadepopulacional2 = populacao2/area2;
     float pibpercapita2 = pib2/populacao2;
     float superpoder2 = populacao2 + area2 + pib2 + pibpercapita2 + densidadepopulacional2 + numerodepontosturisticos2;
 
@@ -64,60 +67,38 @@ int main() {
     printf("O super poder da carta 1 é maior do que a carta 2? %d\n", superpoder > superpoder2);
     
     
-    printf("COMPARAÇÃO DAS CARTAS:\n");
-   
-    if(populacao1 > populacao2) {
-        printf("A carta 1 tem uma população maior que a carta 2.\n");
-    } else if(populacao1 < populacao2) {
-        printf("A carta 2 tem uma população maior que a carta 1.\n");
-    } else {
-        printf("As duas cartas têm a mesma população.\n");
-    }
-    if(area1 > area2) {
-        printf("A carta 1 tem uma área maior que a carta 2.\n");
-    } else if(area1 < area2) {
-        printf("A carta 2 tem uma área maior que a carta 1.\n");
-    } else {
-        printf("As duas cartas têm a mesma área.\n");
-    }
-    if(pib > pib2) {
-        printf("A carta 1 tem um PIB maior que a carta 2.\n");
-    } else if(pib < pib2) {
-        printf("A carta 2 tem um PIB maior que a carta 1.\n");
-    } else {
-        printf("As duas cartas têm o mesmo PIB.\n");
-    }
-    if(numerodepontosturisticos1 > numerodepontosturisticos2) {
-        printf("A carta 1 tem mais pontos turísticos que a carta 2.\n");
-    } else if(numerodepontosturisticos1 < numerodepontosturisticos2) {
-        printf("A carta 2 tem mais pontos turísticos que a carta 1.\n");
-    } else {
-        printf("As duas cartas têm o mesmo número de pontos turísticos.\n");
-    }
-    if(densidadepopulacional < densidadepopulacional2) {
-        printf("A carta 1 tem uma densidade populacional menor que a carta 2.\n");
-    } else if(densidadepopulacional > densidadepopulacional2) {
-        printf("A carta 2 tem uma densidade populacional menor que a carta 1.\n");
-    } else {
-        printf("As duas cartas têm a mesma densidade populacional.\n");
-    }
-    if(pibpercapita > pibpercapita2) {
-        printf("A carta 1 tem um PIB per capita maior que a carta 2.\n");
-    } else if(pibpercapita < pibpercapita2) {
-        printf("A carta 2 tem um PIB per capita maior que a carta 1.\n");
-    } else {
-        printf("As duas cartas têm o mesmo PIB per capita.\n");
+    printf("***Exercício de soma simples:***\n");
 
-    }
-    if(superpoder > superpoder2) {
-        printf("A carta 1 tem um super poder maior que a carta 2.\n");
-    } else if(superpoder < superpoder2) {
-        printf("A carta 2 tem um super poder maior que a carta 1.\n");
-    } else {
-        printf("As duas cartas têm o mesmo super poder.\n");
-    }
 
+    float area, pib;  // Declara e inicializa a segunda variável
+    Printf("Digite o valor da área: ");
+    scanf("%f", &area);
+    Printf("Digite o valor do PIB: ");
+    scanf("%f", &pib); 
+    printf("A soma de %.2f e %.2f é: %.2f\n", area , pib);
+    
+ 
+
+    float area2, pib2;  // Declara e inicializa a segunda variável
+    Printf("Digite o valor da área: ");
+    scanf("%f", &area2);
+    Printf("Digite o valor do PIB: ");
+    scanf("%f", &pib2); 
+    printf("A soma de %.2f e %.2f é:\n", area2 , pib2);
+    
+
+    printf("Soma maior de dois elementos dos atributos, Pib e Área:\n"); 
+   float resultado1, resultado2;
+   resultado1 = area + pib;
+   resultado2 = area2 + pib2;
+    if(resultado1 > resultado2) {
+         printf("A carta 1 tem a maior soma com: %.2f\n", resultado1);
+    } else if(resultado1 < resultado2) {
+         printf("A carta 2 tem a maior soma com: %.2f\n", resultado2);
+    } else {
+         printf("As duas cartas têm a mesma soma: %.2f\n", resultado1);
+    }
     return 0;
 }
-
-
+   
+  
